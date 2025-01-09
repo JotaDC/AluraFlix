@@ -1,7 +1,21 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  font-synthesis: none;
+  --font-principal:"Roboto", serif;
+  --font-secundaria: "Source Code Pro", serif;
+  
+  --negro:#000000;
+  --blanco:#fff;
+  --gris:#F5F5F5;
+  --celeste:#6BD1FF;
+  --azul:#2271D1;
+  --azul-transparente:rgba(34,113,209,0.24);
+  --amarillo:#FFBA05;
+  --verde:#00C86F;
+  --rojo:#E53935;
+
+  font-family: var(--font-principal);
+  /* font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale; */
+  
 }
