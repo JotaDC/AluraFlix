@@ -1,0 +1,32 @@
+.noseleccionado{
+    font-size: 18px;
+    font-weight: 600;
+    padding: 1em;
+    width: 180px;
+    height: 54px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    color:var(--blanco);
+    background-color: var(--negro);
+    border: var(--blanco), solid, 1px;
+}
+
+.seleccionado{
+    font-size: 18px;
+    font-weight: 600;
+    padding: 1em;
+    width: 180px;
+    height: 54px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    color:var(--azul); 
+    background-color: var(--negro);
+    border: var(--azul), solid, 1px;
+}
+
