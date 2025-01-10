@@ -1,0 +1,14 @@
+.pie{
+    display:flex;
+    background-color: var(--negro);
+    padding: 2em;
+    align-items: center;
+    height: 125px;
+    justify-content: center;
+}
+
+.logoContainer{
+    height: 40px;
+    display:flex;
+    align-items: center;
+}

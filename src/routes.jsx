@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Home from "./pages/Home"
 import Cabecera from "./components/Cabecera/Cabecera"
 import Banner from "./components/Banner"
+import Pie from "./components/Pie"
 
 
 
@@ -15,7 +16,7 @@ function AppRoutes(){
                 <Route path="/" element={<Home/>}></Route>
 
             </Routes>
-
+            <Pie/>
         </BrowserRouter>
     )
 }
