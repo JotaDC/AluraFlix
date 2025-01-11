@@ -1,130 +1,128 @@
 {
-    "categoria": [
-      {
-        "descripcion": "Videos de la categoría frontend 💙",
-        "nombre": "frontend",
-        "color": "#6BD1FF",
-        "id": "25"
-      },
-      {
-        "descripcion": "esta es la categoría de WordPress 🦉",
-        "nombre": "wordpress",
-        "color": "#FFBA05",
-        "id": "26"
-      },
-      {
-        "id": "3256",
-        "nombre": "wsl",
-        "color": "#00C86F",
-        "descripcion": "Esta es una descripcion de la categoria"
-      },
-      {
-        "id": "256565",
-        "nombre": "alura",
-        "color": "#7b00e0",
-        "descripcion": "Esta es una descripcion de la categoria"
-      },
-      {
-        "descripcion": "Videos de React 🐣",
-        "nombre": "React",
-        "color": "#00ffd5",
-        "id": "59804be1-bb35-426b-8db8-42fe3a2b52dc"
-      },
-      {
-        "descripcion": "Categoria para os videos de css",
-        "nombre": "CSS",
-        "color": "#ff0000",
-        "id": "be3535fe-da7a-4f44-ba25-1bdacf2bb0d9"
-      }
-    ],
-    "videos": [
-      {
-        "id": "4",
-        "titulo": "[Inmersión Datos] Aprende tu primer código Python Ahora",
-        "imagen_url": "https://i.ytimg.com/vi/8IIMLL-Z9bg/maxresdefault.jpg",
-        "video_url": "https://www.youtube.com/embed/8IIMLL-Z9bg",
-        "descripcion": "Aprende a programar en Python con este curso introductorio.",
-        "categoria": "Frontend"
-      },
-      {
-        "id": "5",
-        "titulo": "Git y GitHub para Principiantes",
-        "imagen_url": "https://i.ytimg.com/vi/-LmFK6skG7s/maxresdefault.jpg",
-        "video_url": "https://www.youtube.com/embed/-LmFK6skG7s",
-        "descripcion": "Curso básico sobre cómo utilizar Git y GitHub para el control de versiones.",
-        "categoria": "Innovación y gestión"
-      },
-      {
-        "id": "2642",
-        "titulo": "Especialidad BACKEND | RESUMEN SEMANA 1 - 3 | Oracle Next Education + Alura Latam",
-        "imagen_url": "https://i.ytimg.com/vi/b71kWley8-o/maxresdefault.jpg",
-        "video_url": "https://www.youtube.com/embed/b71kWley8-o",
-        "descripcion": "Resumen de las semanas 1 a 3 de la especialización en Backend.",
-        "categoria": "Backend"
-      },
-      {
-        "id": "cdcb",
-        "titulo": "Portfolio - Desafío Alura Latam - Front End",
-        "imagen_url": "https://i.ytimg.com/vi/_oat8cSlSbY/maxresdefault.jpg",
-        "video_url": "https://www.youtube.com/embed/_oat8cSlSbY",
-        "descripcion": "Presentación de un portfolio como parte del desafío de frontend.",
-        "categoria": ""
-      },
-      {
-        "id": "4430",
-        "titulo": "Portfolio - Desafío Alura Latam - Front End 2",
-        "imagen_url": "https://i.ytimg.com/vi/_oat8cSlSbY/maxresdefault.jpg",
-        "video_url": "https://www.youtube.com/embed/_oat8cSlSbY",
-        "descripcion": "Presentación de un portfolio como parte del desafío de frontend.",
-        "categoria": "Frontend"
-      },
-      {
-        "id": "aa4c",
-        "titulo": "Principios de integración Frontend y Backend\",     \"categoría\": \"backend",
-        "imagen_url": "https://i.ytimg.com/vi/6m7C1jhTYGM/maxresdefault.jpg",
-        "video_url": "https://www.youtube.com/embed/6m7C1jhTYGM",
-        "descripcion": "Principios básicos para la integración entre frontend y backend.",
-        "categoria": "Frontend"
-      },
-      {
-        "id": "f864",
-        "titulo": "Conexión entre Frontend y Backend con Spring Boot y una API REST",
-        "imagen_url": "https://i.ytimg.com/vi/00_36HIaicA/maxresdefault.jpg",
-        "video_url": "https://www.youtube.com/embed/00_36HIaicA",
-        "descripcion": "Curso sobre cómo conectar frontend y backend utilizando Spring Boot.",
-        "categoria": "Backend"
-      },
-      {
-        "id": "e518",
-        "titulo": "Entendiendo la importancia de Linkedin #AluraTips",
-        "imagen_url": "https://i.ytimg.com/vi/N9vxfMJEyYg/maxresdefault.jpg",
-        "video_url": "https://www.youtube.com/embed/N9vxfMJEyYg",
-        "descripcion": "¿Ya tienes un perfil en Linkedin? ¿Sabes cuál es la importancia en tenerlo? En el video de hoy vamos a hablar de la importancia de la rede social laboral más grande del mundo.",
-        "categoria": "Innovación y gestión"
-      },
-      {
-        "id": "0cab",
-        "titulo": "Desafíos y soluciones del trabajo remoto #AluraTips",
-        "imagen_url": "https://i.ytimg.com/vi/kIvnVfnmDyE/maxresdefault.jpg",
-        "video_url": "https://www.youtube.com/embed/kIvnVfnmDyE",
-        "descripcion": "En el video de hoy vamos a ver cuáles son los desafíos y las soluciones que las empresas y los colaboradores enfrentan con el trabajo remoto.",
-        "categoria": "Innovación y gestión"
-      },
-      {
-        "id": "4581",
-        "titulo": "Simplificando el Back End #AluraTips",
-        "imagen_url": "https://i.ytimg.com/vi/XuSXJ9DUcvY/maxresdefault.jpg",
-        "video_url": "https://www.youtube.com/embed/XuSXJ9DUcvY",
-        "descripcion": "¿Quieres conocer y entender mejor qué es el Back End? En este video Bismarck Berrios nos explica qué es el back end de una manera sencilla.",
-        "categoria": "Backend"
-      },
-      {
-        "id": "ddd1",
-        "titulo": "¿Sabes qué es NodeJS? #AluraTips",
-        "imagen_url": "https://i.ytimg.com/vi/o8x_n4Px1N0/maxresdefault.jpg",
-        "video_url": "https://www.youtube.com/embed/o8x_n4Px1N0",
-        "descripcion": "¿Es un lenguaje de programación? ¿Es un ambiente de desarrollo? ¿Una herramienta? En este video nuestro instructor, Leonardo Castillo, nos explica qué es NodeJS y para qué sirve.",
-        "categoria": "Backend"
-      }
-    ]
-  }
+  "categoria": [
+    {
+      "descripcion": "Videos de la categoría frontend 💙",
+      "nombre": "frontend",
+      "color": "#6BD1FF",
+      "id": "25"
+    },
+    {
+      "descripcion": "esta es la categoría de WordPress 🦉",
+      "nombre": "wordpress",
+      "color": "#FFBA05",
+      "id": "26"
+    },
+    {
+      "id": "3256",
+      "nombre": "wsl",
+      "color": "#00C86F",
+      "descripcion": "Esta es una descripcion de la categoria"
+    },
+    {
+      "id": "256565",
+      "nombre": "alura",
+      "color": "#7b00e0",
+      "descripcion": "Esta es una descripcion de la categoria"
+    },
+    {
+      "descripcion": "Videos de React 🐣",
+      "nombre": "React",
+      "color": "#00ffd5",
+      "id": "59804be1-bb35-426b-8db8-42fe3a2b52dc"
+    },
+    {
+      "descripcion": "Categoria para os videos de css",
+      "nombre": "CSS",
+      "color": "#ff0000",
+      "id": "be3535fe-da7a-4f44-ba25-1bdacf2bb0d9"
+    }
+  ],
+  "videos": [
+    {
+      "id": "4",
+      "titulo": "[Inmersión Datos] Aprende tu primer código Python Ahora",
+      "imagen_url": "https://i.ytimg.com/vi/8IIMLL-Z9bg/maxresdefault.jpg",
+      "video_url": "https://www.youtube.com/embed/8IIMLL-Z9bg",
+      "descripcion": "Aprende a programar en Python con este curso introductorio.",
+      "categoria": "Frontend"
+    },
+    {
+      "id": "5",
+      "titulo": "Git y GitHub para Principiantes",
+      "imagen_url": "https://i.ytimg.com/vi/-LmFK6skG7s/maxresdefault.jpg",
+      "video_url": "https://www.youtube.com/embed/-LmFK6skG7s",
+      "descripcion": "Curso básico sobre cómo utilizar Git y GitHub para el control de versiones.",
+      "categoria": "Innovación y gestión"
+    },
+    {
+      "id": "2642",
+      "titulo": "Especialidad BACKEND | RESUMEN SEMANA 1 - 3 | Oracle Next Education + Alura Latam",
+      "imagen_url": "https://i.ytimg.com/vi/b71kWley8-o/maxresdefault.jpg",
+      "video_url": "https://www.youtube.com/embed/b71kWley8-o",
+      "descripcion": "Resumen de las semanas 1 a 3 de la especialización en Backend.",
+      "categoria": "Backend"
+    },
+    {
+      "id": "cdcb",
+      "titulo": "Portfolio - Desafío Alura Latam - Front End",
+      "imagen_url": "https://i.ytimg.com/vi/_oat8cSlSbY/maxresdefault.jpg",
+      "video_url": "https://www.youtube.com/embed/_oat8cSlSbY",
+      "descripcion": "Presentación de un portfolio como parte del desafío de frontend.",
+      "categoria": ""
+    },
+    {
+      "id": "4430",
+      "titulo": "potafolio con nueva imagen",
+      "imagen_url": "https://i.ytimg.com/vi/6m7C1jhTYGM/maxresdefault.jpg",
+      "video_url": "https://www.youtube.com/embed/_oat8cSlSbY",
+      "descripcion": "Presentación de un portfolio como parte del desafío de \nfrontend.https://i.ytimg.com/vi/_oat8cSlSbY/maxresdefault.jpg",
+      "categoria": "Frontend"
+    },
+    {
+      "id": "aa4c",
+      "titulo": "Principios de integración Frontend y Backend\",     \"categoría\": \"backend",
+      "imagen_url": "https://i.ytimg.com/vi/6m7C1jhTYGM/maxresdefault.jpg",
+      "video_url": "https://www.youtube.com/embed/6m7C1jhTYGM",
+      "descripcion": "Principios básicos para la integración entre frontend y backend.",
+      "categoria": "Frontend"
+    },
+    {
+      "id": "f864",
+      "titulo": "Conexión entre Frontend y Backend con Spring Boot y una API REST",
+      "imagen_url": "https://i.ytimg.com/vi/00_36HIaicA/maxresdefault.jpg",
+      "video_url": "https://www.youtube.com/embed/00_36HIaicA",
+      "descripcion": "Curso sobre cómo conectar frontend y backend utilizando Spring Boot.",
+      "categoria": "Backend"
+    },
+    {
+      "id": "e518",
+      "titulo": "Entendiendo la importancia de Linkedin #AluraTips",
+      "imagen_url": "https://i.ytimg.com/vi/N9vxfMJEyYg/maxresdefault.jpg",
+      "video_url": "https://www.youtube.com/embed/N9vxfMJEyYg",
+      "descripcion": "¿Ya tienes un perfil en Linkedin? ¿Sabes cuál es la importancia en tenerlo? En el video de hoy vamos a hablar de la importancia de la rede social laboral más grande del mundo.",
+      "categoria": "Innovación y gestión"
+    },
+    {
+      "id": "0cab",
+      "titulo": "Desafíos y soluciones del trabajo remoto #AluraTips",
+      "imagen_url": "https://i.ytimg.com/vi/kIvnVfnmDyE/maxresdefault.jpg",
+      "video_url": "https://www.youtube.com/embed/kIvnVfnmDyE",
+      "descripcion": "En el video de hoy vamos a ver cuáles son los desafíos y las soluciones que las empresas y los colaboradores enfrentan con el trabajo remoto.",
+      "categoria": "Innovación y gestión"
+    },
+    {
+      "id": "4581",
+      "titulo": "Simplificando el Back End #AluraTips",
+      "imagen_url": "https://i.ytimg.com/vi/XuSXJ9DUcvY/maxresdefault.jpg",
+      "video_url": "https://www.youtube.com/embed/XuSXJ9DUcvY",
+      "descripcion": "¿Quieres conocer y entender mejor qué es el Back End? En este video Bismarck Berrios nos explica qué es el back end de una manera sencilla.",
+      "categoria": "Backend"
+    },
+    {
+      "titulo": "¿Sabes qué es NodeJS? #AluraTips",
+      "imagen_url": "https://i.ytimg.com/vi/o8x_n4Px1N0/maxresdefault.jpg",
+      "title": "caca",
+      "id": "ddd1"
+    }
+  ]
+}

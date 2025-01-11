@@ -3,6 +3,8 @@ import Home from "./pages/Home"
 import Cabecera from "./components/Cabecera/Cabecera"
 import Banner from "./components/Banner"
 import Pie from "./components/Pie"
+// import ListaVideos from "./components/ListaVideos/ListaVideos"
+import NuevoVideo from "./pages/NuevoVideo"
 
 
 
@@ -12,10 +14,13 @@ function AppRoutes(){
         <BrowserRouter>
             <Cabecera/>
             <Banner img="home" color="#000000"/>
+           
             <Routes>
                 <Route path="/" element={<Home/>}></Route>
+                <Route path="/nuevo-video" element={<NuevoVideo/>}></Route>
 
             </Routes>
+
             <Pie/>
         </BrowserRouter>
     )

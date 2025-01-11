@@ -1,11 +1,14 @@
+import ListaVideos from "../../components/ListaVideos/ListaVideos"
 
 
-function Home(){
-    return(
-      
-        
-        <h1>Hola desde Home</h1>
-       
+function Home() {
+    return (
+
+        <>
+            <ListaVideos categoria="Frontend" />
+            <ListaVideos categoria="Backend" />
+            <ListaVideos categoria="Innovación y gestión" />
+        </>
     )
 }
 
