@@ -3,7 +3,7 @@
 
 import React, { useState, useEffect } from "react";
 import styles from "./ModalEditar.module.css";
-import { fetchCategories } from "../../services/servicesApi/servicesApi"; // Asegúrate de tener esta función en tu servicio
+import { getCategory } from "../../services/servicesApi/servicesApi"; // Asegúrate de tener esta función en tu servicio
 
 const ModalEditar = ({ video, onGuardar, onCancelar }) => {
  
@@ -22,7 +22,7 @@ const ModalEditar = ({ video, onGuardar, onCancelar }) => {
   useEffect(() => {
     const cargarCategorias = async () => {
       try {
-        const categoriasObtenidas = await fetchCategories();
+        const categoriasObtenidas = await getCategory();
         setCategorias(categoriasObtenidas);
       } catch (error) {
         console.error("Error al cargar categorías:", error);

@@ -56,7 +56,7 @@ export const createVideo = async (video) => {
 // ----------------------Servicios de Categoria---------------------------------------
 
  // Obtener la lista de categorías
-export const fetchCategories = async () => {
+export const getCategory = async () => {
     try {
       const response = await fetch(`${baseURL}/categorias`);
       if (!response.ok) {

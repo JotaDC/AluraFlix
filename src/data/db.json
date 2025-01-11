@@ -17,6 +17,12 @@
       "nombre": "Innovación y gestión",
       "color": "#00C86F",
       "descripcion": "Esta es una descripcion de la categoria"
+    },
+    {
+      "descripcion": "Videos de la categoría frontend 💙",
+      "nombre": "Ciencia de Datos",
+      "color": "#6Bd1FF",
+      "id": "io4"
     }
   ],
   "videos": [
@@ -37,16 +43,24 @@
       "categoria": "Innovación y gestión"
     },
     {
+      "id": "2642",
+      "titulo": "Especialidad BACKEND | RESUMEN SEMANA 1 - 3 | Oracle Next Education + Alura Latam",
+      "imagen_url": "https://i.ytimg.com/vi/b71kWley8-o/maxresdefault.jpg",
+      "video_url": "https://www.youtube.com/embed/b71kWley8-o",
+      "descripcion": "Resumen de las semanas 1 a 3 de la especialización en Backend.",
+      "categoria": "Ciencia de Datos"
+    },
+    {
       "id": "cdcb",
       "titulo": "Portfolio - Desafío Alura Latam - Front End",
       "imagen_url": "https://i.ytimg.com/vi/_oat8cSlSbY/maxresdefault.jpg",
       "video_url": "https://www.youtube.com/embed/_oat8cSlSbY",
       "descripcion": "Presentación de un portfolio como parte del desafío de frontend.",
-      "categoria": "Backend"
+      "categoria": "Innovación y gestión"
     },
     {
       "id": "4430",
-      "titulo": "Portfolio0",
+      "titulo": "Portfolio - Desafío Alura Latam - Front End 2",
       "imagen_url": "https://i.ytimg.com/vi/_oat8cSlSbY/maxresdefault.jpg",
       "video_url": "https://www.youtube.com/embed/_oat8cSlSbY",
       "descripcion": "Presentación de un portfolio como parte del desafío de frontend.",
@@ -54,19 +68,11 @@
     },
     {
       "id": "aa4c",
-      "titulo": "Principios dd",
+      "titulo": "Principios de integración Frontend y Backend\",     \"categoría\": \"backend",
       "imagen_url": "https://i.ytimg.com/vi/6m7C1jhTYGM/maxresdefault.jpg",
       "video_url": "https://www.youtube.com/embed/6m7C1jhTYGM",
       "descripcion": "Principios básicos para la integración entre frontend y backend.",
       "categoria": "Frontend"
-    },
-    {
-      "id": "f864",
-      "titulo": "Conexión entre Frontend y Backend con Spring Boot y una API REST",
-      "imagen_url": "https://i.ytimg.com/vi/00_36HIaicA/maxresdefault.jpg",
-      "video_url": "https://www.youtube.com/embed/00_36HIaicA",
-      "descripcion": "Curso sobre cómo conectar frontend y backend utilizando Spring Boot.",
-      "categoria": "Innovación y gestión"
     },
     {
       "id": "e518",
@@ -85,16 +91,24 @@
       "categoria": "Innovación y gestión"
     },
     {
-      "id": "d355",
-      "titulo": "algo",
-      "imagen_url": "",
-      "video_url": "",
-      "descripcion": "",
+      "id": "4581",
+      "titulo": "Simplificando el Back End #AluraTips",
+      "imagen_url": "https://i.ytimg.com/vi/XuSXJ9DUcvY/maxresdefault.jpg",
+      "video_url": "https://www.youtube.com/embed/XuSXJ9DUcvY",
+      "descripcion": "¿Quieres conocer y entender mejor qué es el Back End? En este video Bismarck Berrios nos explica qué es el back end de una manera sencilla.",
+      "categoria": "Innovación y gestión"
+    },
+    {
+      "id": "ddd1",
+      "titulo": "¿Sabes qué es NodeJS? #AluraTips",
+      "imagen_url": "https://i.ytimg.com/vi/o8x_n4Px1N0/maxresdefault.jpg",
+      "video_url": "https://www.youtube.com/embed/o8x_n4Px1N0",
+      "descripcion": "¿Es un lenguaje de programación? ¿Es un ambiente de desarrollo? ¿Una herramienta? En este video nuestro instructor, Leonardo Castillo, nos explica qué es NodeJS y para qué sirve.",
       "categoria": "Frontend"
     },
     {
-      "id": "f74f",
-      "titulo": "caca",
+      "id": "f371",
+      "titulo": "caca2",
       "imagen_url": "",
       "video_url": "",
       "descripcion": "",

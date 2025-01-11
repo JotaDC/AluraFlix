@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { fetchCategories,createVideo } from "../../services/servicesApi/servicesApi";
+import { getCategory,createVideo } from "../../services/servicesApi/servicesApi";
 import styles from "./CrearVideo.module.css";
 
 
@@ -20,7 +20,7 @@ const CrearVideo = () => {
   useEffect(() => {
     const loadCategories = async () => {
       try {
-        const categories = await fetchCategories()
+        const categories = await getCategory()
         setCategorias(categories);
       } catch (error) {
         console.error("Error al cargar las categorías:", error);

@@ -5,7 +5,7 @@ import ModalEditar from "../ModalEditar/ModalEditar"
 import styles from "./ListaVideos.module.css";
 
 
-const ListaVideos = ({ categoria }) => {
+const ListaVideos = ({ categoria, color }) => {
   const [videos, setVideos] = useState([]);
   const [filteredVideos, setFilteredVideos] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -128,7 +128,7 @@ const ListaVideos = ({ categoria }) => {
 
   return (
     <div className={styles.container}>
-      <h2 className={styles.title}>
+      <h2 className={styles.title} style={{color:color}}>
         {categoria ? `Videos de ${categoria}` : "Lista de Videos"}
       </h2>
       <div className={styles.cards}>
