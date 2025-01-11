@@ -72,7 +72,7 @@
       "imagen_url": "https://i.ytimg.com/vi/6m7C1jhTYGM/maxresdefault.jpg",
       "video_url": "https://www.youtube.com/embed/6m7C1jhTYGM",
       "descripcion": "Principios básicos para la integración entre frontend y backend.",
-      "categoria": "Frontend"
+      "categoria": "Backend"
     },
     {
       "id": "e518",
@@ -104,15 +104,7 @@
       "imagen_url": "https://i.ytimg.com/vi/o8x_n4Px1N0/maxresdefault.jpg",
       "video_url": "https://www.youtube.com/embed/o8x_n4Px1N0",
       "descripcion": "¿Es un lenguaje de programación? ¿Es un ambiente de desarrollo? ¿Una herramienta? En este video nuestro instructor, Leonardo Castillo, nos explica qué es NodeJS y para qué sirve.",
-      "categoria": "Frontend"
-    },
-    {
-      "id": "f371",
-      "titulo": "caca2",
-      "imagen_url": "",
-      "video_url": "",
-      "descripcion": "",
-      "categoria": "Frontend"
+      "categoria": "Backend"
     }
   ]
 }
