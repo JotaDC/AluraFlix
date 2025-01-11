@@ -13,8 +13,7 @@ function AppRoutes(){
     return(
         <BrowserRouter>
             <Cabecera/>
-            <Banner img="home" color="#000000"/>
-           
+          
             <Routes>
                 <Route path="/" element={<Home/>}></Route>
                 <Route path="/nuevo-video" element={<NuevoVideo/>}></Route>

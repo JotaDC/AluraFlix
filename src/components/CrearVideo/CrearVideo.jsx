@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import { createVideo } from "../../services/servicesApi/servicesApi";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { fetchCategories,createVideo } from "../../services/servicesApi/servicesApi";
 import styles from "./CrearVideo.module.css";
 
 
-
-const CrearVideo = ({ onVideoCreado }) => {
+const CrearVideo = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    id: "",
     titulo: "",
     imagen_url: "",
     video_url: "",
@@ -14,32 +14,51 @@ const CrearVideo = ({ onVideoCreado }) => {
     categoria: "",
   });
 
+  const [categorias, setCategorias] = useState([]);
+
+  // Cargar las categorías desde el servidor
+  useEffect(() => {
+    const loadCategories = async () => {
+      try {
+        const categories = await fetchCategories()
+        setCategorias(categories);
+      } catch (error) {
+        console.error("Error al cargar las categorías:", error);
+      }
+    };
+
+    loadCategories();
+  }, []);
+
+  // Manejar cambios en el formulario
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prevData) => ({ ...prevData, [name]: value }));
+    setFormData({ ...formData, [name]: value });
   };
 
-  const handleGuardar = async (e) => {
-    e.preventDefault();
+  // Guardar el nuevo video
+  const handleSave = async () => {
     try {
-      const nuevoVideo = await createVideo(formData);
-      onVideoCreado(nuevoVideo);
+      await createVideo(formData);
+      alert("¡Video creado con éxito!");
       setFormData({
-        id: "",
         titulo: "",
         imagen_url: "",
         video_url: "",
         descripcion: "",
         categoria: "",
       });
+      navigate("/")
     } catch (error) {
-      console.error("Error al crear el video:", error);
+      console.error("Error al guardar el video:", error);
+      alert("Ocurrió un error al guardar el video.");
+      navigate("/")
     }
   };
 
-  const handleLimpiar = () => {
+  // Limpiar el formulario
+  const handleClear = () => {
     setFormData({
-      id: "",
       titulo: "",
       imagen_url: "",
       video_url: "",
@@ -49,71 +68,71 @@ const CrearVideo = ({ onVideoCreado }) => {
   };
 
   return (
-    <div className={styles.formContainer}>
-      <h2>Crear Nuevo Video</h2>
-      <form onSubmit={handleGuardar} className={styles.form}>
-        <label>
-          ID
+    <div className={styles.container}>
+      <h2>Crear Video</h2>
+      <form className={styles.form}>
+        <div className={styles.inputGroup}>
+          <label htmlFor="titulo">Título:</label>
           <input
             type="text"
-            name="id"
-            value={formData.id}
-            onChange={handleChange}
-            required
-          />
-        </label>
-        <label>
-          Título
-          <input
-            type="text"
+            id="titulo"
             name="titulo"
             value={formData.titulo}
             onChange={handleChange}
-            required
           />
-        </label>
-        <label>
-          Imagen URL
+        </div>
+        <div className={styles.inputGroup}>
+          <label htmlFor="imagen_url">URL de la Imagen:</label>
           <input
-            type="url"
+            type="text"
+            id="imagen_url"
             name="imagen_url"
             value={formData.imagen_url}
             onChange={handleChange}
           />
-        </label>
-        <label>
-          Video URL
+        </div>
+        <div className={styles.inputGroup}>
+          <label htmlFor="video_url">URL del Video:</label>
           <input
-            type="url"
+            type="text"
+            id="video_url"
             name="video_url"
             value={formData.video_url}
             onChange={handleChange}
           />
-        </label>
-        <label>
-          Descripción
+        </div>
+        <div className={styles.inputGroup}>
+          <label htmlFor="descripcion">Descripción:</label>
           <textarea
+            id="descripcion"
             name="descripcion"
             value={formData.descripcion}
             onChange={handleChange}
-            rows="3"
           ></textarea>
-        </label>
-        <label>
-          Categoría
-          <input
-            type="text"
+        </div>
+        <div className={styles.inputGroup}>
+          <label htmlFor="categoria">Categoría:</label>
+          <select
+            id="categoria"
             name="categoria"
             value={formData.categoria}
             onChange={handleChange}
-            required
-          />
-        </label>
-        <div className={styles.buttons}>
-          <button type="submit" className={styles.saveButton}>
+          >
+            <option value="">Selecciona una categoría</option>
+            {categorias.map((categoria) => (
+               
+              <option key={categoria.id} value={categoria.nombre}>
+
+                {categoria.nombre}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div className={styles.actions}>
+          <button type="button" onClick={handleSave}>
             Guardar
           </button>
-          <button type="button" onClick={handleLimpiar} className={styles.clearButton}>
+          <button type="button" onClick={handleClear}>
             Limpiar
           </button>
         </div>

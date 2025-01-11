@@ -1,8 +1,10 @@
-const baseURL = "http://localhost:3000/videos";
+const baseURL = "http://localhost:3000";
 
+// ----------------------Servicios de Videos---------------------------------------
+ // Obtener la lista de Videos GET
 export const getVideos = async () => {
   try {
-    const response = await fetch(baseURL);
+    const response = await fetch(`${baseURL}/videos`);
     if (!response.ok) throw new Error("Error al obtener los videos");
     return await response.json();
   } catch (error) {
@@ -11,9 +13,10 @@ export const getVideos = async () => {
   }
 };
 
+ // Borrar videos DELETE
 export const deleteVideo = async (id) => {
   try {
-    const response = await fetch(`${baseURL}/${id}`, { method: "DELETE" });
+    const response = await fetch(`${baseURL}/videos/${id}`, { method: "DELETE" });
     if (!response.ok) throw new Error("Error al eliminar el video");
   } catch (error) {
     console.error(error);
@@ -21,9 +24,10 @@ export const deleteVideo = async (id) => {
   }
 };
 
+ // Actualizar videos PUT
 export const updateVideo = async (id, data) => {
   try {
-    const response = await fetch(`${baseURL}/${id}`, {
+    const response = await fetch(`${baseURL}/videos/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -37,9 +41,9 @@ export const updateVideo = async (id, data) => {
     throw error;
   }
 };
-
+ // Crear Videos POST
 export const createVideo = async (video) => {
-    const response = await fetch("http://localhost:3000/videos", {
+    const response = await fetch(`${baseURL}/videos`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(video),
@@ -48,3 +52,78 @@ export const createVideo = async (video) => {
     return await response.json();
   };
   
+
+// ----------------------Servicios de Categoria---------------------------------------
+
+ // Obtener la lista de categorías
+export const fetchCategories = async () => {
+    try {
+      const response = await fetch(`${baseURL}/categorias`);
+      if (!response.ok) {
+        throw new Error("Error al obtener las categorías");
+      }
+      return await response.json();
+    } catch (error) {
+      console.error("Error:", error);
+      throw error;
+    }
+  };
+  
+  // Crear una nueva categoría
+  export const createCategory = async (categoryData) => {
+    try {
+      const response = await fetch(`${baseURL}/categorias`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(categoryData),
+      });
+  
+      if (!response.ok) {
+        throw new Error("Error al crear la categoría");
+      }
+      return await response.json();
+    } catch (error) {
+      console.error("Error:", error);
+      throw error;
+    }
+  };
+  
+  // Actualizar una categoría
+  export const updateCategory = async (categoryId, updatedData) => {
+    try {
+      const response = await fetch(`${baseURL}/categorias/${categoryId}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(updatedData),
+      });
+  
+      if (!response.ok) {
+        throw new Error("Error al actualizar la categoría");
+      }
+      return await response.json();
+    } catch (error) {
+      console.error("Error:", error);
+      throw error;
+    }
+  };
+  
+  // Eliminar una categoría
+  export const deleteCategory = async (categoryId) => {
+    try {
+      const response = await fetch(`${baseURL}/categorias/${categoryId}`, {
+        method: "DELETE",
+      });
+  
+      if (!response.ok) {
+        throw new Error("Error al eliminar la categoría");
+      }
+      return true; // Retorna true si la eliminación fue exitosa
+    } catch (error) {
+      console.error("Error:", error);
+      throw error;
+    }
+  };

@@ -27,8 +27,16 @@ const ListaVideos = ({ categoria }) => {
     };
 
     fetchVideos();
-  }, []);
+  }, [filteredVideos]);
 
+  // useEffect(() => {
+  //   if (categoria) {
+  //     setFilteredVideos(videos.filter((video) => video.categoria === categoria));
+  //   } else {
+  //     setFilteredVideos(videos);
+  //   }
+  // }, [videos, categoria]);
+  
   useEffect(() => {
     if (categoria) {
       setFilteredVideos(videos.filter((video) => video.categoria === categoria));
@@ -36,7 +44,7 @@ const ListaVideos = ({ categoria }) => {
       setFilteredVideos(videos);
     }
   }, [videos, categoria]);
-
+  
   const handleEliminarClick = (id) => {
     setVideoToDelete(id);
     setModalEliminarVisible(true);
@@ -64,14 +72,45 @@ const ListaVideos = ({ categoria }) => {
     setModalEditarVisible(true);
   };
 
+  // const handleGuardarEditar = async (data) => {
+  //   try {
+  //     const updatedVideo = await updateVideo(videoToEdit.id, data);
+  //     setVideos(
+  //       videos.map((video) =>
+  //         video.id === videoToEdit.id ? { ...updatedVideo } : video
+  //       )
+  //     );
+  //   } catch (error) {
+  //     console.error("Error al editar el video:", error);
+  //   } finally {
+  //     setModalEditarVisible(false);
+  //     setVideoToEdit(null);
+  //   }
+  // };
   const handleGuardarEditar = async (data) => {
     try {
       const updatedVideo = await updateVideo(videoToEdit.id, data);
+  
+      // Actualizar el estado general de videos
       setVideos(
         videos.map((video) =>
           video.id === videoToEdit.id ? { ...updatedVideo } : video
         )
       );
+  
+      // Si la categoría actual coincide, actualizamos también la lista filtrada
+      if (!categoria || updatedVideo.categoria === categoria) {
+        setFilteredVideos((prev) =>
+          prev.map((video) =>
+            video.id === videoToEdit.id ? { ...updatedVideo } : video
+          )
+        );
+      } else {
+        // Si el video editado ya no pertenece a la categoría actual, lo eliminamos de la lista filtrada
+        setFilteredVideos((prev) =>
+          prev.filter((video) => video.id !== videoToEdit.id)
+        );
+      }
     } catch (error) {
       console.error("Error al editar el video:", error);
     } finally {
