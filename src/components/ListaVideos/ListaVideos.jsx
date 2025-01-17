@@ -108,27 +108,32 @@ const ListaVideos = ({ categoria, color }) => {
 
   return (
     <div className={styles.container}>
-      <h2 className={styles.title} style={{ backgroundColor: color }}>
-        {categoria ? `${categoria}` : "Lista de Videos"}
-      </h2>
+      {filteredVideos.length > 0 && (
+        <h2 className={styles.title} style={{ backgroundColor: color }}>
+          {categoria ? `${categoria}` : "Lista de Videos"}
+        </h2>
+      )}
       <div className={styles.cards}>
         {filteredVideos.map((video) => (
-          <div key={video.id} className={styles.card}>
+          <div key={video.id} className={styles.card} style={{ borderColor: color }}>
             <img
               src={video.imagen_url || "./img/sinimagen.png"}
               alt={video.titulo}
-              onClick={() => handlePlayVideo(video)}  // Al hacer clic en la imagen, se abre el modalPlay
+              onClick={() => handlePlayVideo(video)} // Al hacer clic en la imagen, se abre el modalPlay
             />
             <h3>{video.titulo}</h3>
             <div>
-             
-              <button   onClick={() => handleEliminarClick(video.id)}><img className="styles.eliminar" src="./img/eliminar.png" /> Borrar</button>
-              <button  onClick={() => handleEditarClick(video)}><img className="styles.editar" src="./img/editar.png" /> Editar</button>
+              <button onClick={() => handleEliminarClick(video.id)}>
+                <img className="styles.eliminar" src="./img/eliminar.png" /> Borrar
+              </button>
+              <button onClick={() => handleEditarClick(video)}>
+                <img className="styles.editar" src="./img/editar.png" /> Editar
+              </button>
             </div>
           </div>
         ))}
       </div>
-
+  
       {modalEliminarVisible && (
         <ModalConfirmar
           mensaje="¿Estás seguro de que deseas eliminar este video?"
@@ -136,7 +141,7 @@ const ListaVideos = ({ categoria, color }) => {
           onCancelar={handleCancelarEliminar}
         />
       )}
-
+  
       {modalEditarVisible && videoToEdit && (
         <ModalEditar
           video={videoToEdit}
@@ -144,15 +149,16 @@ const ListaVideos = ({ categoria, color }) => {
           onCancelar={handleCancelarEditar}
         />
       )}
-
+  
       {modalPlayVisible && videoToPlay && (
         <ModalPlay
-          video={videoToPlay}  // Pasa el video que se quiere reproducir al modalPlay
-          onCerrar={handleCerrarModalPlay}  // Función para cerrar el modal
+          video={videoToPlay} // Pasa el video que se quiere reproducir al modalPlay
+          onCerrar={handleCerrarModalPlay} // Función para cerrar el modal
         />
       )}
     </div>
   );
+  
 };
 
 export default ListaVideos;

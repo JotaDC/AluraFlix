@@ -28,7 +28,7 @@
   }
   
   .card {
-    border: 1px solid #ccc;
+    border: 3px solid #ccc;
     padding: 1rem;
     width: 430px;
     height: 380px;
@@ -45,7 +45,7 @@
   button img {
     width: 30px;
     height: auto;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.1rem;
     
     vertical-align: middle;
   

@@ -42,7 +42,7 @@
       "imagen_url": "https://i.ytimg.com/vi/_oat8cSlSbY/maxresdefault.jpg",
       "video_url": "https://www.youtube.com/embed/_oat8cSlSbY",
       "descripcion": "Presentación de un portfolio como parte del desafío de frontend.",
-      "categoria": "Frontend"
+      "categoria": "Innovación y gestión"
     },
     {
       "id": "aa4c",
@@ -82,14 +82,6 @@
       "imagen_url": "https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2014/09/61943-videos-youtube.jpg?tf=1200x",
       "video_url": "https://www.youtube.com/embed/cmF0n5SJelw?si=rDLkrJu3ZitWw9Fh",
       "descripcion": "SERÁ QUE A ALURA VALE A PENA? | REACT da plataforma da ALURA com GIULIA BORDIGNON do Space Coding",
-      "categoria": "Frontend"
-    },
-    {
-      "id": "7048",
-      "titulo": "Conociendo la API de Open AI #aluramás",
-      "imagen_url": "https://i.ytimg.com/vi/6m7C1jhTYGM/maxresdefault.jpg",
-      "video_url": "https://www.youtube.com/embed/tDG29s1IVx8?si=6KYmQS1JCimKQsOG",
-      "descripcion": "Conociendo la API",
       "categoria": "Frontend"
     }
   ]
