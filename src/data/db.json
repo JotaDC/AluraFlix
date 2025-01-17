@@ -37,12 +37,20 @@
       "categoria": "Backend"
     },
     {
+      "id": "cdcb",
+      "titulo": "Portfolio - Desafío Alura Latam - Front End",
+      "imagen_url": "https://i.ytimg.com/vi/_oat8cSlSbY/maxresdefault.jpg",
+      "video_url": "https://www.youtube.com/embed/_oat8cSlSbY",
+      "descripcion": "Presentación de un portfolio como parte del desafío de frontend.",
+      "categoria": "Innovación y gestión"
+    },
+    {
       "id": "4430",
       "titulo": "Portfolio - Desafío Alura Latam - Front End 2",
       "imagen_url": "https://i.ytimg.com/vi/_oat8cSlSbY/maxresdefault.jpg",
       "video_url": "https://www.youtube.com/embed/_oat8cSlSbY",
       "descripcion": "Presentación de un portfolio como parte del desafío de frontend.",
-      "categoria": "Innovación y gestión"
+      "categoria": "Frontend"
     },
     {
       "id": "aa4c",
@@ -67,6 +75,14 @@
       "video_url": "https://www.youtube.com/embed/kIvnVfnmDyE",
       "descripcion": "En el video de hoy vamos a ver cuáles son los desafíos y las soluciones que las empresas y los colaboradores enfrentan con el trabajo remoto.",
       "categoria": "Frontend"
+    },
+    {
+      "id": "4581",
+      "titulo": "Simplificando el Back End #AluraTips",
+      "imagen_url": "https://i.ytimg.com/vi/XuSXJ9DUcvY/maxresdefault.jpg",
+      "video_url": "https://www.youtube.com/embed/XuSXJ9DUcvY",
+      "descripcion": "¿Quieres conocer y entender mejor qué es el Back End? En este video Bismarck Berrios nos explica qué es el back end de una manera sencilla.",
+      "categoria": "Innovación y gestión"
     },
     {
       "id": "ddd1",
