@@ -47,6 +47,7 @@ a{
     color:var(--azul); 
     background-color: var(--negro);
     border: var(--azul), solid, 1px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
   .noseleccionado {
     /* Estilo para el enlace no seleccionado */
@@ -63,4 +64,12 @@ a{
     color:var(--blanco);
     background-color: var(--negro);
     border: var(--blanco), solid, 1px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
   }
+
+  
+
+
+.seleccionado:hover, .noseleccionado:hover{
+  transform: scale(1.1);
+}

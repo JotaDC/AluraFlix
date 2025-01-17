@@ -108,8 +108,8 @@ const ListaVideos = ({ categoria, color }) => {
 
   return (
     <div className={styles.container}>
-      <h2 className={styles.title} style={{ color: color }}>
-        {categoria ? `Videos de ${categoria}` : "Lista de Videos"}
+      <h2 className={styles.title} style={{ backgroundColor: color }}>
+        {categoria ? `${categoria}` : "Lista de Videos"}
       </h2>
       <div className={styles.cards}>
         {filteredVideos.map((video) => (
@@ -121,8 +121,9 @@ const ListaVideos = ({ categoria, color }) => {
             />
             <h3>{video.titulo}</h3>
             <div>
-              <button onClick={() => handleEditarClick(video)}>Editar</button>
-              <button onClick={() => handleEliminarClick(video.id)}>Eliminar</button>
+             
+              <button   onClick={() => handleEliminarClick(video.id)}><img className="styles.eliminar" src="./img/eliminar.png" /> Borrar</button>
+              <button  onClick={() => handleEditarClick(video)}><img className="styles.editar" src="./img/editar.png" /> Editar</button>
             </div>
           </div>
         ))}
