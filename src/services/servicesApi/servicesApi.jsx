@@ -1,5 +1,6 @@
-const baseURL = "http://localhost:3000";
-// const baseURL="https://673614835995834c8a9559d1.mockapi.io";
+//const baseURL = "http://localhost:3000"; //En modo Local
+//const baseURL="https://my-json-server.typicode.com/JotaDC/aluraFlixdb"; //en internet pero de solo lectura
+const baseURL="https://db-alura-flix-con-vercel.vercel.app/"; //db en Vercel
 
 // ----------------------Servicios de Videos---------------------------------------
  // Obtener la lista de Videos GET
