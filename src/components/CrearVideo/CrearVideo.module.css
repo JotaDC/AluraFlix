@@ -45,48 +45,50 @@
     
   }
 
- 
+  input[type="text"]:focus,
+  input[type="url"]:focus,
+  textarea:focus,
+  select:focus {
+    border-color: var(--azul); /* Cambia a naranja al enfocar */
+  }
   
   .actions {
     display: flex;
-    justify-content: space-between;
+    justify-content:space-evenly;
   }
   
- .guardar {
-    background-color: black; 
-    color: white; 
-    border: 2px solid var(--azul); 
-    border-radius: 10px; /* Ajusta el valor para redondear más o menos */ 
-    padding: 10px 30px; /* Ajusta el valor para el tamaño del botón */ 
-    font-size: 16px; /* Ajusta el valor para el tamaño de la letra */ 
-    font-weight: 500;
+  .guardar {
+    background-color: transparent; /* Fondo transparente */
+    color: white; /* Texto blanco */
+    padding: 10px 15px;
+    border: 2px solid #007bff; /* Borde azul */
+    border-radius: 10px; /* Esquinas redondeadas */
     cursor: pointer;
-    text-transform:uppercase;
-    cursor: pointer;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-
+    font-size: 14px;
+    transition: transform 0.2s ease, background-color 0.3s ease, color 0.3s ease;
   }
-  .limpiar{
-    background-color: black; 
-    color: white; 
-    border: 2px solid var(--blanco); 
-    border-radius: 10px; /* Ajusta el valor para redondear más o menos */ 
-    padding: 10px 20px; /* Ajusta el valor para el tamaño del botón */ 
-    font-size: 16px; /* Ajusta el valor para el tamaño de la letra */ 
-    cursor: pointer;
-    font-weight: 500;
-    text-transform:uppercase;
-    cursor: pointer;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+  .guardar:hover {
+    transform: scale(1.1); /* Se agranda al pasar el mouse */
+    background-color: #007bff; /* Fondo azul al pasar el mouse */
+    color: white; /* Texto blanco */
   }
-
-
-
-
-.guardar:hover, .limpiar:hover{
-  transform: scale(1.1);
-}
-
+  
+  .limpiar {
+    background-color: transparent; /* Fondo transparente */
+    color: white; /* Texto blanco */
+    padding: 10px 15px;
+    border: 2px solid white; /* Borde blanco */
+    border-radius: 10px; /* Esquinas redondeadas */
+    cursor: pointer;
+    font-size: 14px;
+    transition: transform 0.2s ease, background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .limpiar:hover {
+    transform: scale(1.1); /* Se agranda al pasar el mouse */
+    background-color: white; /* Fondo blanco al pasar el mouse */
+    color: black; /* Texto negro */
+  }
 
   .error{
     color:red;

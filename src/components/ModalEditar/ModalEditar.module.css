@@ -1,69 +1,142 @@
+
 .modalBackdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-  }
-  
-  .modalContent {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    width: 400px;
-    max-width: 90%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .form label {
-    display: block;
-    margin-bottom: 10px;
-  }
-  
-  .form input,
-  .form textarea {
-    width: 100%;
-    padding: 8px;
-    margin-top: 4px;
-    margin-bottom: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .buttons {
-    display: flex;
-    justify-content: flex-end;
-    gap: 10px;
-  }
-  
-  .saveButton {
-    background: #4caf50;
-    color: white;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .saveButton:hover {
-    background: #45a049;
-  }
-  
-  .cancelButton {
-    background: #f44336;
-    color: white;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .cancelButton:hover {
-    background: #d32f2f;
-  }
-  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--azul-transparente); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background-color: var(--negro); 
+  border: 2px solid var(--blanco);
+  border-radius: 10px; 
+  width: 90%;
+  max-width: 500px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  color: #fff; /* Texto blanco */
+  position: relative;
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  color: #fff; /* Color blanco */
+  border: 2px solid #fff; /* Borde blanco */
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.closeButton:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+input[type="text"],
+input[type="url"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  background-color: transparent; /* Fondo transparente */
+  color: #fff; /* Texto blanco */
+  border: 1px solid #fff; /* Borde blanco */
+  border-radius: 5px; /* Esquinas redondeadas */
+  font-size: 14px;
+  outline: none;
+}
+
+input[type="text"]:focus,
+input[type="url"]:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--azul); /* Cambia a naranja al enfocar */
+}
+
+textarea {
+  resize: none; /* Evita el redimensionamiento */
+}
+
+label {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.error {
+  color: red; /* Mensajes de error en rojo */
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+h2 {
+  margin-bottom: 1em;
+}
+
+.saveButton {
+  background-color: transparent; /* Fondo transparente */
+  color: var(--blanco); /* Texto blanco */
+  padding: 10px 15px;
+  border: 2px solid var(--azul); /* Borde azul */
+  border-radius: 10px; /* Esquinas redondeadas */
+  cursor: pointer;
+  font-size: 14px;
+  transition: transform 0.2s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.saveButton:hover {
+  transform: scale(1.1); /* Se agranda al pasar el mouse */
+  background-color: #007bff; /* Fondo azul al pasar el mouse */
+  color: var(--blanco); /* Texto blanco */
+}
+
+.clearButton {
+  background-color: transparent; /* Fondo transparente */
+  color: var(--blanco); /* Texto blanco */
+  padding: 10px 15px;
+  border: 2px solid var(--blanco); /* Borde blanco */
+  border-radius: 10px; /* Esquinas redondeadas */
+  cursor: pointer;
+  font-size: 14px;
+  transition: transform 0.2s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.clearButton:hover {
+  transform: scale(1.1); /* Se agranda al pasar el mouse */
+  background-color: var(--blanco); /* Fondo blanco al pasar el mouse */
+  color: var(--negro); /* Texto negro */
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+}

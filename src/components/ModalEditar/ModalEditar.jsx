@@ -1,12 +1,8 @@
-// import React, { useState } from "react";
-// import styles from "./ModalEditar.module.css";
-
 import React, { useState, useEffect } from "react";
 import styles from "./ModalEditar.module.css";
-import { getCategory } from "../../services/servicesApi/servicesApi"; // Asegúrate de tener esta función en tu servicio
+import { getCategory } from "../../services/servicesApi/servicesApi";
 
 const ModalEditar = ({ video, onGuardar, onCancelar }) => {
- 
   const [formData, setFormData] = useState({
     id: video.id,
     titulo: video.titulo,
@@ -15,10 +11,11 @@ const ModalEditar = ({ video, onGuardar, onCancelar }) => {
     descripcion: video.descripcion,
     categoria: video.categoria,
   });
-  console.log(formData)
-  const [categorias, setCategorias] = useState([]);
 
-  // Cargar las categorías desde el servidor
+  const [categorias, setCategorias] = useState([]);
+  const [errors, setErrors] = useState({});
+
+  // Cargar categorías desde el servidor
   useEffect(() => {
     const cargarCategorias = async () => {
       try {
@@ -32,86 +29,149 @@ const ModalEditar = ({ video, onGuardar, onCancelar }) => {
     cargarCategorias();
   }, []);
 
+  // Manejar cambios en el formulario
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
+  // Validar el formulario
+  const validateForm = () => {
+    const newErrors = {};
+
+    if (!formData.titulo.trim()) {
+      newErrors.titulo = "El título es obligatorio.";
+    }
+
+    if (!formData.imagen_url.trim() || !isValidImageUrl(formData.imagen_url)) {
+      newErrors.imagen_url = "La URL de la imagen es inválida o está vacía.";
+    }
+
+    if (!formData.video_url.trim() || !isValidVideoUrl(formData.video_url)) {
+      newErrors.video_url = "La URL del video es inválida o está vacía.";
+    }
+
+    if (!formData.descripcion.trim()) {
+      newErrors.descripcion = "La descripción no puede estar vacía.";
+    }
+
+    if (!formData.categoria.trim()) {
+      newErrors.categoria = "Debe seleccionar una categoría.";
+    }
+
+    setErrors(newErrors);
+
+    return Object.keys(newErrors).length === 0;
+  };
+
+  // Validar formato de URL de imagen
+  const isValidImageUrl = (url) => {
+    return /\.(jpeg|jpg|gif|png)$/.test(url);
+  };
+
+  // Validar formato de URL de video
+  const isValidVideoUrl = (url) => {
+    return /^(https?:\/\/)?(www\.)?(youtube\.com|youtu\.be|vimeo\.com)/.test(url);
+  };
+
+  // Manejar el envío del formulario
   const handleSubmit = (e) => {
     e.preventDefault();
-    onGuardar(formData);
-   
+    if (validateForm()) {
+      onGuardar(formData);
+    } else {
+      alert("Por favor, corrige los errores antes de continuar.");
+    }
+  };
 
+  // Limpiar el formulario
+  const handleClearForm = () => {
+    setFormData({
+      id: video.id,
+      titulo: "",
+      imagen_url: "",
+      video_url: "",
+      descripcion: "",
+      categoria: "",
+    });
+    setErrors({});
   };
 
   return (
     <div className={styles.modalBackdrop}>
       <div className={styles.modalContent}>
+        <button className={styles.closeButton} onClick={onCancelar}>
+          &times;
+        </button>
         <h2>Editar Video</h2>
         <form onSubmit={handleSubmit} className={styles.form}>
-          <label>
-            ID (No editable)
-            <input type="text" value={formData.id} readOnly />
-          </label>
-          <label>
-            Título
+          <div className={styles.inputGroup}>
+            <label>Título</label>
             <input
               type="text"
               name="titulo"
               value={formData.titulo}
               onChange={handleChange}
-              required
             />
-          </label>
-          <label>
-            Imagen URL
+            {errors.titulo && <p className={styles.error}>{errors.titulo}</p>}
+          </div>
+          <div className={styles.inputGroup}>
+            <label>Imagen URL</label>
             <input
-              type="url"
+              type="text"
               name="imagen_url"
               value={formData.imagen_url}
               onChange={handleChange}
             />
-          </label>
-          <label>
-            Video URL
+            {errors.imagen_url && <p className={styles.error}>{errors.imagen_url}</p>}
+          </div>
+          <div className={styles.inputGroup}>
+            <label>Video URL</label>
             <input
-              type="url"
+              type="text"
               name="video_url"
               value={formData.video_url}
               onChange={handleChange}
             />
-          </label>
-          <label>
-            Descripción
+            {errors.video_url && <p className={styles.error}>{errors.video_url}</p>}
+          </div>
+          <div className={styles.inputGroup}>
+            <label>Descripción</label>
             <textarea
               name="descripcion"
               value={formData.descripcion}
               onChange={handleChange}
-              rows="3"
             ></textarea>
-          </label>
-          <label>
-            Categoría
+            {errors.descripcion && <p className={styles.error}>{errors.descripcion}</p>}
+          </div>
+          <div className={styles.inputGroup}>
+            <label>Categoría</label>
             <select
               name="categoria"
               value={formData.categoria}
               onChange={handleChange}
-              required
             >
-              <option value="">{video.categoria}</option>
+              <option value="" hidden>
+                Selecciona una categoría
+              </option>
               {categorias.map((categoria) => (
                 <option key={categoria.id} value={categoria.nombre}>
                   {categoria.nombre}
                 </option>
               ))}
             </select>
-          </label>
+            {errors.categoria && <p className={styles.error}>{errors.categoria}</p>}
+          </div>
           <div className={styles.buttons}>
             <button type="submit" className={styles.saveButton}>
               Guardar
             </button>
-            <button type="button" onClick={onCancelar} className={styles.cancelButton}>
-              Cancelar
+            <button
+              type="button"
+              onClick={handleClearForm}
+              className={styles.clearButton}
+            >
+              Limpiar formulario
             </button>
           </div>
         </form>
@@ -121,96 +181,3 @@ const ModalEditar = ({ video, onGuardar, onCancelar }) => {
 };
 
 export default ModalEditar;
-
-
-// const ModalEditar = ({ video, onGuardar, onCancelar }) => {
-//   const [formData, setFormData] = useState({
-//     id: video.id,
-//     titulo: video.titulo,
-//     imagen_url: video.imagen_url,
-//     video_url: video.video_url,
-//     descripcion: video.descripcion,
-//     categoria: video.categoria,
-//   });
-
-//   const handleChange = (e) => {
-//     const { name, value } = e.target;
-//     setFormData((prevData) => ({ ...prevData, [name]: value }));
-//   };
-
-//   const handleSubmit = (e) => {
-//     e.preventDefault();
-//     onGuardar(formData);
-//   };
-
-//   return (
-//     <div className={styles.modalBackdrop}>
-//       <div className={styles.modalContent}>
-//         <h2>Editar Video</h2>
-//         <form onSubmit={handleSubmit} className={styles.form}>
-//           <label>
-//             ID (No editable)
-//             <input type="text" value={formData.id} readOnly />
-//           </label>
-//           <label>
-//             Título
-//             <input
-//               type="text"
-//               name="titulo"
-//               value={formData.titulo}
-//               onChange={handleChange}
-//               required
-//             />
-//           </label>
-//           <label>
-//             Imagen URL
-//             <input
-//               type="url"
-//               name="imagen_url"
-//               value={formData.imagen_url}
-//               onChange={handleChange}
-//             />
-//           </label>
-//           <label>
-//             Video URL
-//             <input
-//               type="url"
-//               name="video_url"
-//               value={formData.video_url}
-//               onChange={handleChange}
-//             />
-//           </label>
-//           <label>
-//             Descripción
-//             <textarea
-//               name="descripcion"
-//               value={formData.descripcion}
-//               onChange={handleChange}
-//               rows="3"
-//             ></textarea>
-//           </label>
-//           <label>
-//             Categoría
-//             <input
-//               type="text"
-//               name="categoria"
-//               value={formData.categoria}
-//               onChange={handleChange}
-//               required
-//             />
-//           </label>
-//           <div className={styles.buttons}>
-//             <button type="submit" className={styles.saveButton}>
-//               Guardar
-//             </button>
-//             <button type="button" onClick={onCancelar} className={styles.cancelButton}>
-//               Cancelar
-//             </button>
-//           </div>
-//         </form>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default ModalEditar;
