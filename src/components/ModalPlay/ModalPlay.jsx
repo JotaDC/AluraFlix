@@ -14,7 +14,7 @@ const ModalPlay = ({ video, onCerrar }) => {
         <iframe
             width="100%"
             height="315"
-            src={video.video_url}  // Asegúrate de que el video tenga la propiedad 'url' para reproducirlo
+            src={video.video_url}  
             title={video.titulo}
             frameBorder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
