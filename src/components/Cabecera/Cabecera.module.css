@@ -1,39 +1,54 @@
-.cabecera{
-    display:flex;
+.cabecera {
+    display: flex;
     background-color: var(--negro);
     padding: 2em;
     align-items: center;
     height: 125px;
     justify-content: space-between;
 }
-a{
+
+a {
     text-decoration: none;
 }
-.logoContainer{
+
+.logoContainer {
     height: 40px;
-    display:flex;
+    display: flex;
     align-items: center;
 }
-.cabecera img{
+
+.cabecera img {
     align-self: start;
 }
-/* .cabecera span{
-    align-self: end;
-    text-transform: uppercase;
-    font-weight: 600;
-    color:var(--blanco);
-    margin-left:8px;
-    font-size: 1.5rem;
 
-} */
-.cabecera nav{
-    align-self: end;
+/* Cabecera para pantallas pequeñas */
+@media (max-width: 768px) {
+    .cabecera {
+        flex-direction: column; /* Cambia la dirección de los elementos a columna */
+        height: auto; /* Elimina la altura fija */
+        padding: 1em; /* Ajusta el padding para pantallas pequeñas */
+    }
+
+    .logoContainer {
+        margin-bottom: 1em; /* Espacio entre el logo y los botones */
+    }
+
+    .cabecera nav {
+        flex-direction: row; /* Los botones también se alinean verticalmente */
+        gap: 0.5em; /* Reducir el espacio entre botones */
+        align-self: center;
+       
+    }
+}
+
+.cabecera nav {
+    
     display: flex;
     gap: 1em;
+    align-items: center;
 }
 
 .seleccionado {
-    /* Estilo para el enlace seleccionado */
     font-size: 18px;
     font-weight: 600;
     padding: 1em;
@@ -44,13 +59,13 @@ a{
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
-    color:var(--azul); 
+    color: var(--azul);
     background-color: var(--negro);
-    border: var(--azul), solid, 1px;
+    border: var(--azul) solid 1px;
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
-  .noseleccionado {
-    /* Estilo para el enlace no seleccionado */
+
+.noseleccionado {
     font-size: 18px;
     font-weight: 600;
     padding: 1em;
@@ -61,15 +76,12 @@ a{
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
-    color:var(--blanco);
+    color: var(--blanco);
     background-color: var(--negro);
-    border: var(--blanco), solid, 1px;
+    border: var(--blanco) solid 1px;
     transition: transform 0.3s ease, background-color 0.3s ease;
-  }
+}
 
-  
-
-
-.seleccionado:hover, .noseleccionado:hover{
-  transform: scale(1.1);
+.seleccionado:hover, .noseleccionado:hover {
+    transform: scale(1.1);
 }

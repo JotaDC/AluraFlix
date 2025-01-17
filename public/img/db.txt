@@ -22,40 +22,40 @@
   "videos": [
     {
       "id": "4",
-      "titulo": "[Inmersión Datos] Aprende tu primer código Python Ahora",
-      "imagen_url": "https://i.ytimg.com/vi/8IIMLL-Z9bg/maxresdefault.jpg",
-      "video_url": "https://www.youtube.com/embed/8IIMLL-Z9bg",
-      "descripcion": "Aprende a programar en Python con este curso introductorio.",
-      "categoria": "Frontend"
+      "titulo": "Motivación y Buenos Hábitos: Claves para Estudiar con Éxito #aluratips",
+      "imagen_url": "https://img.youtube.com/vi/TNJbxPaB6cA/maxresdefault.jpg",
+      "video_url": "https://www.youtube.com/embed/TNJbxPaB6cA?si=SMB3VK9_2jBfv8ML",
+      "descripcion": "Motivación y Buenos Hábitos: Claves para Estudiar con Éxito",
+      "categoria": "Innovación y gestión"
     },
     {
       "id": "5",
-      "titulo": "Git y GitHub para Principiantes",
-      "imagen_url": "https://i.ytimg.com/vi/-LmFK6skG7s/maxresdefault.jpg",
-      "video_url": "https://www.youtube.com/embed/-LmFK6skG7s",
-      "descripcion": "Curso básico sobre cómo utilizar Git y GitHub para el control de versiones.",
-      "categoria": "Backend"
+      "titulo": "¿Cómo un desarrollador Front End utiliza el Figma? #AluraMás",
+      "imagen_url": "https://img.youtube.com/vi/UuAX5azcvDQ/maxresdefault.jpg",
+      "video_url": "https://www.youtube.com/embed/UuAX5azcvDQ",
+      "descripcion": "¿Cómo un desarrollador Front End utiliza el Figma? #AluraMás",
+      "categoria": "Frontend"
     },
     {
       "id": "cdcb",
       "titulo": "Portfolio - Desafío Alura Latam - Front End",
-      "imagen_url": "https://i.ytimg.com/vi/_oat8cSlSbY/maxresdefault.jpg",
+      "imagen_url": "https://img.youtube.com/vi/_oat8cSlSbY/maxresdefault.jpg",
       "video_url": "https://www.youtube.com/embed/_oat8cSlSbY",
       "descripcion": "Presentación de un portfolio como parte del desafío de frontend.",
-      "categoria": "Innovación y gestión"
+      "categoria": "Frontend"
     },
     {
       "id": "4430",
-      "titulo": "Portfolio - Desafío Alura Latam - Front End 2",
-      "imagen_url": "https://i.ytimg.com/vi/_oat8cSlSbY/maxresdefault.jpg",
-      "video_url": "https://www.youtube.com/embed/_oat8cSlSbY",
-      "descripcion": "Presentación de un portfolio como parte del desafío de frontend.",
+      "titulo": "Box Model y Box sizing #AluraMás",
+      "imagen_url": "https://img.youtube.com/vi/ts9qfCKamKg/maxresdefault.jpg",
+      "video_url": "https://www.youtube.com/embed/ts9qfCKamKg",
+      "descripcion": "Box Model y Box sizing #AluraMás",
       "categoria": "Frontend"
     },
     {
       "id": "aa4c",
       "titulo": "Principios de integración Frontend y Backend\",     \"categoría\": \"backend",
-      "imagen_url": "https://i.ytimg.com/vi/6m7C1jhTYGM/maxresdefault.jpg",
+      "imagen_url": "https://img.youtube.com/vi/6m7C1jhTYGM/maxresdefault.jpg",
       "video_url": "https://www.youtube.com/embed/6m7C1jhTYGM",
       "descripcion": "Principios básicos para la integración entre frontend y backend.",
       "categoria": "Backend"
@@ -63,7 +63,7 @@
     {
       "id": "e518",
       "titulo": "Entendiendo la importancia de Linkedin #AluraTips",
-      "imagen_url": "https://i.ytimg.com/vi/N9vxfMJEyYg/maxresdefault.jpg",
+      "imagen_url": "https://img.youtube.com/vi/N9vxfMJEyYg/maxresdefault.jpg",
       "video_url": "https://www.youtube.com/embed/N9vxfMJEyYg",
       "descripcion": "¿Ya tienes un perfil en Linkedin? ¿Sabes cuál es la importancia en tenerlo? En el video de hoy vamos a hablar de la importancia de la rede social laboral más grande del mundo.",
       "categoria": "Backend"
@@ -71,34 +71,42 @@
     {
       "id": "0cab",
       "titulo": "Desafíos y soluciones del trabajo remoto #AluraTips",
-      "imagen_url": "https://i.ytimg.com/vi/kIvnVfnmDyE/maxresdefault.jpg",
+      "imagen_url": "https://img.youtube.com/vi/kIvnVfnmDyE/maxresdefault.jpg",
       "video_url": "https://www.youtube.com/embed/kIvnVfnmDyE",
       "descripcion": "En el video de hoy vamos a ver cuáles son los desafíos y las soluciones que las empresas y los colaboradores enfrentan con el trabajo remoto.",
-      "categoria": "Frontend"
+      "categoria": "Innovación y gestión"
     },
     {
       "id": "4581",
       "titulo": "Simplificando el Back End #AluraTips",
-      "imagen_url": "https://i.ytimg.com/vi/XuSXJ9DUcvY/maxresdefault.jpg",
+      "imagen_url": "https://img.youtube.com/vi/XuSXJ9DUcvY/maxresdefault.jpg",
       "video_url": "https://www.youtube.com/embed/XuSXJ9DUcvY",
       "descripcion": "¿Quieres conocer y entender mejor qué es el Back End? En este video Bismarck Berrios nos explica qué es el back end de una manera sencilla.",
-      "categoria": "Innovación y gestión"
+      "categoria": "Backend"
     },
     {
       "id": "ddd1",
       "titulo": "¿Sabes qué es NodeJS? #AluraTips",
-      "imagen_url": "https://i.ytimg.com/vi/o8x_n4Px1N0/maxresdefault.jpg",
+      "imagen_url": "https://img.youtube.com/vi/o8x_n4Px1N0/maxresdefault.jpg",
       "video_url": "https://www.youtube.com/embed/o8x_n4Px1N0",
       "descripcion": "¿Es un lenguaje de programación? ¿Es un ambiente de desarrollo? ¿Una herramienta? En este video nuestro instructor, Leonardo Castillo, nos explica qué es NodeJS y para qué sirve.",
       "categoria": "Backend"
     },
     {
       "id": "63f5",
-      "titulo": "Vale la pena react?",
-      "imagen_url": "https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2014/09/61943-videos-youtube.jpg?tf=1200x",
-      "video_url": "https://www.youtube.com/embed/cmF0n5SJelw?si=rDLkrJu3ZitWw9Fh",
-      "descripcion": "SERÁ QUE A ALURA VALE A PENA? | REACT da plataforma da ALURA com GIULIA BORDIGNON do Space Coding",
+      "titulo": "¿Por qué utilizar React con Typescript? #aluratips",
+      "imagen_url": "https://img.youtube.com/vi/RLZ7-ZfkwOE/maxresdefault.jpg",
+      "video_url": "https://www.youtube.com/embed/RLZ7-ZfkwOE",
+      "descripcion": "¿React con JavaScript o React con TypeScript?",
       "categoria": "Frontend"
+    },
+    {
+      "id": "3088",
+      "titulo": "Conociendo la API de Open AI #aluramás",
+      "imagen_url": "https://img.youtube.com/vi/tDG29s1IVx8/maxresdefault.jpg",
+      "video_url": "https://www.youtube.com/embed/tDG29s1IVx8?si=PgFqqsjnfNdeOk2j",
+      "descripcion": "¿Te interesa aprender a conectar tus aplicaciones Java con la API de OpenAI?",
+      "categoria": "Backend"
     }
   ]
 }
