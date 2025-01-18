@@ -1,7 +1,8 @@
 //const baseURL = "http://localhost:3000"; //En modo Local
-//const baseURL="https://my-json-server.typicode.com/JotaDC/aluraFlixdb"; //en internet pero de solo lectura
-//const baseURL="https://db-alura-flix-con-vercel.vercel.app"; //db en Vercel pero me da error 500 a pesar que realiza abm
 const baseURL="https://678add6edd587da7ac2b97ef.mockapi.io"; // MockApi con otra cuenta de correo
+//const baseURL="https://my-json-server.typicode.com/JotaDC/aluraFlixdb"; //en internet pero de solo lectura
+//const baseURL="https://db-alura-flix-con-vercel.vercel.app"; //db en Vercel pero me da error 500 a pesar que realiza crud bien
+
 
 // ----------------------Servicios de Videos---------------------------------------
  // Obtener la lista de Videos GET
