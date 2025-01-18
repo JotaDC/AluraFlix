@@ -1,7 +1,5 @@
 # Aluraflix
 
-![Aluraflix]()
-
 Aluraflix es una aplicación de catálogo de videos inspirada en Netflix, diseñada para administrar y visualizar videos organizados por categorías. Este proyecto es parte de un desafío del programa Oracle Next Education (ONE).
 
 ---
@@ -46,11 +44,13 @@ Sigue estos pasos para instalar y ejecutar el proyecto localmente:
 ## **Para el uso de la base de datos en forma local**
 Sigue estos pasos para ejectuar el servidor de datos localmente:
 1. Modificar Linea 1 de codigo en servicesApi.jsx y comentar linea 2
+   ```bash
    Linea1 --> const baseURL = "http://localhost:3000";
-
+   ```
 2. Ejecutar servidor de datos fake
+   ```bash
    json-server --watch ./src/data/db.json --port 3000
-
+   ```
 ## **Uso**
 1. Agrega un video proporcionando el título, imagen, video de youtube (https://www.youtube.com/embed/) y categoría.
 2. Edita los videos directamente desde la interfaz usando el ícono de edición.
