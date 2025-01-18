@@ -17,7 +17,7 @@ function AppRoutes(){
             <Routes>
                 <Route path="/" element={<Home/>}></Route>
                 <Route path="/nuevo-video" element={<NuevoVideo/>}></Route>
-
+                
             </Routes>
 
             <Pie/>
