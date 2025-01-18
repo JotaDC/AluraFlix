@@ -1,6 +1,4 @@
-.container {
-    
-  }
+
   
   .title {
     display: inline-flex;
@@ -37,7 +35,9 @@
     border-radius: 10px;
     transition: transform 0.2s ease;
   }
-  
+  .fotovideo{
+    cursor: pointer;
+  }
   .card:hover {
     transform: scale(1.05);
   }

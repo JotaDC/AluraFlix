@@ -115,6 +115,7 @@ const ListaVideos = ({ categoria, color, videos, onActualizarVideo,onEliminarVid
         {filteredVideos.map((video) => (
           <div key={video.id} className={styles.card} style={{ borderColor: color }}>
             <img
+              className={styles.fotovideo}
               src={video.imagen_url || "./img/sinimagen.png"}
               alt={video.titulo}
               onClick={() => handlePlayVideo(video)} // Al hacer clic en la imagen, se abre el modalPlay
