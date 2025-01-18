@@ -21,7 +21,7 @@
   ],
   "videos": [
     {
-      "id": "4",
+      "id": "1",
       "titulo": "Motivación y Buenos Hábitos: Claves para Estudiar con Éxito #aluratips",
       "imagen_url": "https://img.youtube.com/vi/TNJbxPaB6cA/maxresdefault.jpg",
       "video_url": "https://www.youtube.com/embed/TNJbxPaB6cA?si=SMB3VK9_2jBfv8ML",
@@ -29,7 +29,7 @@
       "categoria": "Innovación y gestión"
     },
     {
-      "id": "5",
+      "id": "2",
       "titulo": "¿Cómo un desarrollador Front End utiliza el Figma? #AluraMás",
       "imagen_url": "https://img.youtube.com/vi/UuAX5azcvDQ/maxresdefault.jpg",
       "video_url": "https://www.youtube.com/embed/UuAX5azcvDQ",
@@ -37,7 +37,7 @@
       "categoria": "Frontend"
     },
     {
-      "id": "cdcb",
+      "id": "3",
       "titulo": "Portfolio - Desafío Alura Latam - Front End",
       "imagen_url": "https://img.youtube.com/vi/_oat8cSlSbY/maxresdefault.jpg",
       "video_url": "https://www.youtube.com/embed/_oat8cSlSbY",
@@ -45,7 +45,7 @@
       "categoria": "Frontend"
     },
     {
-      "id": "4430",
+      "id": "4",
       "titulo": "Box Model y Box sizing #AluraMás",
       "imagen_url": "https://img.youtube.com/vi/ts9qfCKamKg/maxresdefault.jpg",
       "video_url": "https://www.youtube.com/embed/ts9qfCKamKg",
@@ -53,7 +53,7 @@
       "categoria": "Frontend"
     },
     {
-      "id": "aa4c",
+      "id": "5",
       "titulo": "Principios de integración Frontend y Backend\",     \"categoría\": \"backend",
       "imagen_url": "https://img.youtube.com/vi/6m7C1jhTYGM/maxresdefault.jpg",
       "video_url": "https://www.youtube.com/embed/6m7C1jhTYGM",
@@ -61,7 +61,7 @@
       "categoria": "Backend"
     },
     {
-      "id": "e518",
+      "id": "6",
       "titulo": "Entendiendo la importancia de Linkedin #AluraTips",
       "imagen_url": "https://img.youtube.com/vi/N9vxfMJEyYg/maxresdefault.jpg",
       "video_url": "https://www.youtube.com/embed/N9vxfMJEyYg",
@@ -69,7 +69,7 @@
       "categoria": "Backend"
     },
     {
-      "id": "0cab",
+      "id": "7",
       "titulo": "Desafíos y soluciones del trabajo remoto #AluraTips",
       "imagen_url": "https://img.youtube.com/vi/kIvnVfnmDyE/maxresdefault.jpg",
       "video_url": "https://www.youtube.com/embed/kIvnVfnmDyE",
@@ -77,7 +77,7 @@
       "categoria": "Innovación y gestión"
     },
     {
-      "id": "4581",
+      "id": "8",
       "titulo": "Simplificando el Back End #AluraTips",
       "imagen_url": "https://img.youtube.com/vi/XuSXJ9DUcvY/maxresdefault.jpg",
       "video_url": "https://www.youtube.com/embed/XuSXJ9DUcvY",
@@ -85,7 +85,7 @@
       "categoria": "Backend"
     },
     {
-      "id": "ddd1",
+      "id": "9",
       "titulo": "¿Sabes qué es NodeJS? #AluraTips",
       "imagen_url": "https://img.youtube.com/vi/o8x_n4Px1N0/maxresdefault.jpg",
       "video_url": "https://www.youtube.com/embed/o8x_n4Px1N0",
@@ -93,7 +93,7 @@
       "categoria": "Backend"
     },
     {
-      "id": "63f5",
+      "id": "10",
       "titulo": "¿Por qué utilizar React con Typescript? #aluratips",
       "imagen_url": "https://img.youtube.com/vi/RLZ7-ZfkwOE/maxresdefault.jpg",
       "video_url": "https://www.youtube.com/embed/RLZ7-ZfkwOE",
@@ -101,11 +101,33 @@
       "categoria": "Frontend"
     },
     {
-      "id": "3088",
+      "id": "11",
       "titulo": "Conociendo la API de Open AI #aluramás",
       "imagen_url": "https://img.youtube.com/vi/tDG29s1IVx8/maxresdefault.jpg",
       "video_url": "https://www.youtube.com/embed/tDG29s1IVx8?si=PgFqqsjnfNdeOk2j",
       "descripcion": "¿Te interesa aprender a conectar tus aplicaciones Java con la API de OpenAI?",
+      "categoria": "Backend"
+    },
+    {
+      "createdAt": "2025-01-18T02:49:38.341Z",
+      "name": "Katherine Howe",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1181.jpg",
+      "id": "12",
+      "titulo": "Test1",
+      "imagen_url": "https://i.ytimg.com/vi/6m7C1jhTYGM/maxresdefault.jpg",
+      "video_url": "https://www.youtube.com/embed/tDG29s1IVx8?si=6KYmQS1JCimKQsOG",
+      "descripcion": "test de nuevo video 1",
+      "categoria": "Frontend"
+    },
+    {
+      "createdAt": "2025-01-18T10:49:50.459Z",
+      "name": "Vickie Runolfsson",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/286.jpg",
+      "id": "13",
+      "titulo": "test2",
+      "imagen_url": "https://i.ytimg.com/vi/6m7C1jhTYGM/maxresdefault.jpg",
+      "video_url": "https://www.youtube.com/embed/tDG29s1IVx8?si=PgFqqsjnfNdeOk2j",
+      "descripcion": "test2 deaggregar",
       "categoria": "Backend"
     }
   ]

@@ -6,8 +6,9 @@ import ModalEditar from "../ModalEditar/ModalEditar";
 import ModalPlay from "../ModalPlay/ModalPlay";  // Importa el nuevo modal
 import styles from "./ListaVideos.module.css";
 
-const ListaVideos = ({ categoria, color }) => {
-  const [videos, setVideos] = useState([]);
+
+const ListaVideos = ({ categoria, color, videos, onActualizarVideo,onEliminarVideo }) => {
+   const [videosLocal, setVideosLocal] = useState([]);
   const [filteredVideos, setFilteredVideos] = useState([]);
   const [loading, setLoading] = useState(true);
   const [modalEliminarVisible, setModalEliminarVisible] = useState(false);
@@ -21,7 +22,7 @@ const ListaVideos = ({ categoria, color }) => {
     const fetchVideos = async () => {
       try {
         const data = await getVideos();
-        setVideos(data);
+        setVideosLocal(data);
       } catch (error) {
         console.error("Error al cargar los videos:", error);
       } finally {
@@ -46,9 +47,10 @@ const ListaVideos = ({ categoria, color }) => {
   };
 
   const handleConfirmarEliminar = async () => {
+
     try {
-      await deleteVideo(videoToDelete);
-      setVideos(videos.filter((video) => video.id !== videoToDelete));
+      await deleteVideo(videoToDelete); // Llamada a la API para eliminar el video
+      onEliminarVideo(videoToDelete); // Actualiza el estado global en Home
     } catch (error) {
       console.error("Error al eliminar el video:", error);
     } finally {
@@ -70,11 +72,12 @@ const ListaVideos = ({ categoria, color }) => {
   const handleGuardarEditar = async (data) => {
     try {
       const updatedVideo = await updateVideo(videoToEdit.id, data);
-      setVideos(
-        videos.map((video) =>
-          video.id === videoToEdit.id ? { ...updatedVideo } : video
-        )
-      );
+      // setVideos(
+      //   videos.map((video) =>
+      //     video.id === videoToEdit.id ? { ...updatedVideo } : video
+      //   )
+      // );
+      onActualizarVideo(updatedVideo); // Actualiza el estado global en Home
     } catch (error) {
       console.error("Error al editar el video:", error);
     } finally {
