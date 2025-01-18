@@ -30,7 +30,7 @@ const ListaVideos = ({ categoria, color }) => {
     };
 
     fetchVideos();
-  }, [videos]);
+  }, []);
 
   useEffect(() => {
     if (categoria) {
